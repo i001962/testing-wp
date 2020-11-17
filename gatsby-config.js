@@ -16,6 +16,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+     resolve: `gatsby-source-wordpress-experimental`,
+      options: {
+        url: process.env.WPGRAPHQL_URL || `https://cryptowerk.com/graphql`,
+      },
+   }
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
